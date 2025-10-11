@@ -17,6 +17,20 @@ public class Locators extends Base {
 		//its a link text .
 		driver.findElement(By.partialLinkText("Checkbox"));
 		
+		driver.findElement(By.cssSelector("button[id='button-one']"));
+		//css selector
+		
+		///html/body/section/div/div/div[2]/div[1]/div/div[2]/form/button-----absolute xpath   
+		driver.findElement(By.xpath("//button[@id='button-two']"));
+		
+		driver.findElement(By.xpath("//button[text()='Show Message']"));   //without id ,using text
+		
+		driver.findElement(By.xpath("//button[@id='button-one' and @type='button']"));  //and
+		
+		driver.findElement(By.xpath("//button[@id='button-one' or @id='button-one-electronics']"));//or
+		
+		driver.findElement(By.xpath(" //div[contains (text(), 'Single Input Field')]//parent::div[@class='card']"));
+		driver.findElement(By.xpath("//div[@class='card']//child::button[@id='button-one']"));
 	}
 
 	public static void main(String[] args) {
