@@ -29,9 +29,18 @@ public class Locators extends Base {
 		
 		driver.findElement(By.xpath("//button[@id='button-one' or @id='button-one-electronics']"));//or
 		
-		driver.findElement(By.xpath(" //div[contains (text(), 'Single Input Field')]//parent::div[@class='card']"));
-		driver.findElement(By.xpath("//div[@class='card']//child::button[@id='button-one']"));
-	}
+		driver.findElement(By.xpath(" //div[contains (text(), 'Single Input Field')]//parent::div[@class='card']"));//parent
+		
+		driver.findElement(By.xpath("//div[@class='card']//child::button[@id='button-one']")); //child
+		
+		driver.findElement(By.xpath(" //button[@id='button-one']//following::div[@class='card']"));//following
+		
+		driver.findElement(By.xpath(" //button[@id='button-one']//preceding:: div[@class='card']"));//preceeding
+		
+		driver.findElement(By.xpath(" //button[@id='button-one']//ancestor::div"));//ancestor
+		
+		driver.findElement(By.xpath(" //div[@class='card']//descendant::div"));//descendant
+		}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
