@@ -10,7 +10,7 @@ public class HandlingFrames extends Base {
 	{
 		driver.navigate().to("https://demoqa.com/frames");
 		List<WebElement>totalframes = driver.findElements(By.tagName("iframe"));
-		System.out.println(totalframes.size());//total crames finding 
+		System.out.println(totalframes.size());//total frames finding 
 		
 		WebElement frame1 = driver.findElement(By.id("frame1"));
 		driver.switchTo().frame(frame1); // switch control to frame
