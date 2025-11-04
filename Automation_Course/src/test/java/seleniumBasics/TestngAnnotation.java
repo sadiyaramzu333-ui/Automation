@@ -51,7 +51,7 @@ public class TestngAnnotation {
 	public void beforeSuite() {
 		System.out.println("sample before suite");
 	}
-	//@AfterSuite
+	@AfterSuite
 	public void afterSuite()
 	{
 		System.out.println("sample after suite");
